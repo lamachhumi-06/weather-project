@@ -1,0 +1,99 @@
+/* =========================
+   Contact Page
+   ========================= */
+
+.contact-page {
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.contact-container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.contact-container h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+}
+
+.contact-subtitle {
+  margin: 10px 0 35px;
+  text-align: center;
+  font-size: 17px;
+  color: #666;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Name, Email and Message headings */
+.form-group label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 15px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input {
+  height: 48px;
+}
+
+.form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2864e6;
+  box-shadow: 0 0 0 3px rgba(40, 100, 230, 0.12);
+}
+
+.submit-button {
+  align-self: center;
+  margin-top: 5px;
+  padding: 13px 30px;
+  border: none;
+  border-radius: 7px;
+  background-color: #2864e6;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #1d4fc2;
+}
