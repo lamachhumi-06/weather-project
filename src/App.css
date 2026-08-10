@@ -1,3 +1,153 @@
+.navbar {
+  background-color: var(--navbar-bg);
+  padding: 18px 30px;
+
+  box-shadow: 0 2px 8px var(--shadow);
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 15px;
+  }
+
+  .navbar ul {
+    gap: 20px;
+  }
+
+  .navbar a {
+    font-size: 16px;
+  }
+}
+
+.weather-container {
+  min-height: calc(100vh - 70px);
+  padding: 60px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--bg-color);
+
+  transition: background-color 0.3s ease;
+}
+
+.weather-title {
+  color: var(--text-color);
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* City dropdown */
+
+.city-select {
+  width: 250px;
+  padding: 12px 15px;
+
+  font-size: 16px;
+
+  background-color: var(--input-bg);
+  color: var(--text-color);
+
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+
+  outline: none;
+  cursor: pointer;
+
+  margin-bottom: 30px;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.city-select:focus {
+  border-color: var(--primary-hover);
+}
+
+/* Weather card */
+
+.weather-card {
+  width: 350px;
+  padding: 30px;
+
+  background-color: var(--card-bg);
+  color: var(--text-color);
+
+  border-radius: 15px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 20px var(--shadow);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.weather-card h2 {
+  color: var(--primary-color);
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.weather-card p {
+  color: var(--secondary-text);
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .weather-title {
+    font-size: 28px;
+  }
+
+  .weather-card {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .city-select {
+    width: 90%;
+  }
+}
+
 /* =========================
    Contact Page
    ========================= */
@@ -96,4 +246,305 @@
 
 .submit-button:hover {
   background-color: #1d4fc2;
+}
+
+.about-container {
+  min-height: calc(100vh - 70px);
+  padding: 60px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* About card */
+
+.about-card {
+  width: 700px;
+  max-width: 100%;
+
+  padding: 40px;
+
+  background-color: var(--card-bg);
+  color: var(--text-color);
+
+  border-radius: 15px;
+
+  box-shadow: 0 8px 20px var(--shadow);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Main heading */
+
+.about-card h1 {
+  text-align: center;
+  color: var(--primary-color);
+
+  font-size: 34px;
+  margin-bottom: 25px;
+}
+
+/* Description */
+
+.about-card p {
+  color: var(--secondary-text);
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  text-align: center;
+
+  margin-bottom: 35px;
+}
+
+/* Technology heading */
+
+.about-card h2 {
+  color: var(--text-color);
+
+  font-size: 25px;
+
+  margin-bottom: 20px;
+
+  border-bottom: 2px solid var(--primary-color);
+
+  padding-bottom: 10px;
+}
+
+/* Technology list */
+
+.about-card ul {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+/* List items */
+
+.about-card li {
+  background-color: var(--secondary-bg);
+  color: var(--secondary-text);
+
+  padding: 13px 18px;
+
+  margin-bottom: 10px;
+
+  border-radius: 8px;
+
+  border-left: 4px solid var(--primary-color);
+
+  font-size: 16px;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* Hover effect */
+
+.about-card li:hover {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+
+  transform: translateX(5px);
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .about-container {
+    padding: 30px 15px;
+  }
+
+  .about-card {
+    padding: 25px 20px;
+  }
+
+  .about-card h1 {
+    font-size: 28px;
+  }
+
+  .about-card p {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .about-card h2 {
+    font-size: 22px;
+  }
+
+  .about-card li {
+    font-size: 15px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* =========================
+   LIGHT THEME
+   ========================= */
+
+body.light {
+  --bg-color: #f1f5f9;
+  --secondary-bg: #ffffff;
+  --card-bg: #ffffff;
+  --text-color: #1e293b;
+  --secondary-text: #475569;
+  --border-color: #cbd5e1;
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --navbar-bg: #ffffff;
+  --button-bg: #1e293b;
+  --button-text: #ffffff;
+  --input-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   DARK THEME
+   ========================= */
+
+body.dark {
+  --bg-color: #0f172a;
+  --secondary-bg: #1e293b;
+  --card-bg: #1e293b;
+  --text-color: #f8fafc;
+  --secondary-text: #cbd5e1;
+  --border-color: #475569;
+  --primary-color: #60a5fa;
+  --primary-hover: #93c5fd;
+  --navbar-bg: #1e293b;
+  --button-bg: #f8fafc;
+  --button-text: #0f172a;
+  --input-bg: #334155;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   GLOBAL PAGE
+   ========================= */
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+#root {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* =========================
+   THEME BUTTON
+   ========================= */
+
+.theme-btn {
+  position: absolute;
+  top: 80px;
+  right: 25px;
+  z-index: 10;
+}
+
+.theme-btn button {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.theme-btn button:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   COMMON ELEMENTS
+   ========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-color);
+}
+
+p {
+  color: var(--secondary-text);
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--secondary-text);
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+  .theme-btn {
+    position: static;
+    text-align: center;
+    margin: 20px 0;
+  }
 }
