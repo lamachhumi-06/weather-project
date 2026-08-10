@@ -6,16 +6,21 @@ function Home() {
     const [city, setCity] = useState("Kathmandu");
     const [weather, setWeather] = useState(null);
 
-    useEffect(() => { fetchWeather(city); }, [city]);
-    const fetchWeather = async (selectedCity) => {
-        try {
-            const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&appid=${apiKey}&units=imperial`);
-            setWeather(response.data);
+
+    useEffect(() => {
+        const fetchWeather = async (selectedCity) => {
+            try {
+                const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&appid=${apiKey}&units=imperial`);
+                setWeather(response.data);
+            }
+            catch (err) {
+                console.error(err);
+            }
         }
-        catch (err) {
-            console.error(err);
-        }
-    }
+
+        fetchWeather(city);
+    }, [city]);
+
     return (
         <div>
             <h1>Weather Dashboard</h1>
